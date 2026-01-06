@@ -1,9 +1,14 @@
 <script>
-const devtools = new Image();
-Object.defineProperty(devtools, 'id', {
-  get() {
-    onDevToolsDetected();
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", e => {
+  if (
+    e.key === "F12" ||
+    (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key)) ||
+    (e.ctrlKey && e.key === "U")
+  ) {
+    e.preventDefault();
+    return false;
   }
 });
-console.log(devtools);
 </script>
