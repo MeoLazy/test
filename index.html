@@ -1,0 +1,9 @@
+<script>
+const devtools = new Image();
+Object.defineProperty(devtools, 'id', {
+  get() {
+    onDevToolsDetected();
+  }
+});
+console.log(devtools);
+</script>
